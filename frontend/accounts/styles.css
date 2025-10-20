@@ -1,0 +1,42 @@
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'pppins',sans-serif;
+}
+
+body{min-height: 100vh;
+    background: linear-gradient(135deg, pink 0%, palevioletred 50%, plum 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.wrapper{width: 100%;
+    max-width: 960px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 40 px purple;
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.page-header{display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+
+.page-header h1 {font-size: 28px;
+    color: plum;
+    margin-bottom: 8px;
+}
+
+.page-header p {font-size: 14px;
+    color: plum;
+
+
+}
