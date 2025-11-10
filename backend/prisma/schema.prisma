@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PersonType{
+  fisica
+  juridica
+}
+
+model Account{
+  id String @id @default(uuid())
+  usename String @db.VarChar(120)
+  email String @unique
+  passwordHash String @map("password_hash")
+  personType PersonType @map("person_type")
+  cpf String? @unique @db.VarChar(11)
+  cnpj String? @unique @db.VarChar(14)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("accounts")
+}
+
+
